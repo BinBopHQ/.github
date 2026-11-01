@@ -3,41 +3,52 @@ name: Shipping
 about: Coordinate shipping an update across the relevant targets.
 ---
 
-<!-- Answer what applies; remove or mark N/A anything that doesn't. Link target sub-issues after creating this issue. -->
+<!-- Fill in Ready before proceeding. Remove unused rows or mark N/A; link target sub-issues after this issue exists. Check items only when complete. -->
 
 ## Ready
 
-**What are we shipping, and who is it for?**
+**What is the update?**
 
-**Where is the finish line?** Which targets must be available, to which audiences, and what checks must pass?
+**What is the finish line?** For each target below, specify its version, intended audience or environment, and link to its target issue. State any additional overall checks beneath the table.
 
-**Which targets are involved?** Link or create a sub-issue for each target that needs its own workstream. Each should define its own finish line and gate.
+| Target | Current version | Shipping version | Audience / environment | Target issue |
+| --- | --- | --- | --- | --- |
+| API | | | | |
+| Web | | | | |
+| iOS | | | | |
+| Android | | | | |
 
-| Target | Workstream | Dependencies / gate |
-| --- | --- | --- |
-| | | |
+**What overall checks must pass?**
 
-**What is the rollout plan?** What order, compatibility requirements, and fallback or forward-fix options matter? What can continue if one target is blocked?
+**In what order will targets ship?** Which must wait for another, and which can proceed independently?
 
-**Who needs to know?** Who coordinates the shipment, gives each Go signal, and receives updates?
+**Which compatibility constraints matter?** Include supported API and client versions and any migration sequencing.
+
+**What happens if a target fails or is delayed?** Identify the response and who decides whether this attempt can continue.
+
+**Who coordinates this shipment?** Who or what gives each target's Go signal, and where will it be received?
+
+**Who needs updates, and where?**
 
 **Are we ready?**
 
 ## Set
 
-- [ ] Are the required target builds and rollout controls ready?
-- [ ] Have the agreed testing, reviews, submissions, and approvals happened?
-- [ ] Are dependencies satisfied, including compatibility with older clients?
-- [ ] Is each Go signal and its owner or source clear?
+- [ ] Are the target versions and target issues recorded above?
+- [ ] Have required builds, tests, reviews, store submissions, and approvals been completed in each target issue?
+- [ ] Are the rollout order, dependencies, and compatibility requirements satisfied?
+- [ ] Are the target Go signals, owners, and communication channels confirmed?
 
 **Are we set?**
 
 ## Go
 
-**What's happening?** Which targets have shipped, which are waiting, and what do the agreed checks show? Update the target issues as work progresses.
+- [ ] Have the target workstreams started in the agreed order as their gates allow?
+- [ ] Has each required target reached its own finish line, as recorded in its issue?
+- [ ] Have the additional overall checks passed?
+- [ ] Have remaining issues been handed off and the outcome communicated?
 
-**If blocked:** What are we waiting on? Do we need a human's help or decision? Record the blocker and who or what can resolve it. Other targets may be able to continue.
+**If blocked:** What is blocking progress, and who or what can resolve it? If human help or a decision is needed, record it as hard blocked. Other targets may continue where dependencies allow.
 
-If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure; a new attempt should link to this workstream.
-
-**Outcome:** What shipped, what checks passed, and are there any remaining issues or people to notify?
+If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure and retain this issue as context for any new attempt.
+**Outcome and evidence:**

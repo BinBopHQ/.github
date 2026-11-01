@@ -3,35 +3,49 @@ name: Shipping - Web
 about: Prepare and ship an update to the Web target.
 ---
 
-<!-- Answer what applies; remove or mark N/A anything that doesn't. Link the coordinating parent issue if there is one. -->
+<!-- Fill in Ready before proceeding. Remove or mark N/A checks that do not apply. Link the coordinating parent issue if there is one. -->
 
 ## Ready
 
-**What are we shipping?** Which web version or build, routes, and audiences are affected?
+**What web version is shipping?**
 
-**Where is the finish line?** What must be available to whom, and what checks must pass?
+**Which artifact or deployment is shipping?** Include its reference and the source revision or build link.
 
-**What is the plan?** How will the update roll out? What API compatibility, asset and cache behavior, and response to a bad rollout matter?
+**Which environment, routes, and audience are affected?**
 
-**What else must happen first?** Which dependencies, checks, reviews, or approvals are required, and who or what owns each gate? Where is the coordinating issue?
+**Where is the finish line?** State the intended outcome and the agreed checks for this target.
+
+**What compatibility requirements apply?** Include API versions and relevant asset or cache behavior.
+
+**What is the rollout plan?** Record the deployment or promotion method, order, and response if checks fail.
+
+**Which exact checks must pass?** List URLs, key journeys, accessibility or rendering checks, and where to inspect them.
+
+**Which workstreams, reviews, or approvals must happen first?** Link the coordinating parent and dependencies. Who or what owns each gate?
+
+**Who or what gives the Go signal, and where will it be received?**
+
+**Who needs the outcome, and where?**
 
 **Are we ready?**
 
 ## Set
 
-- [ ] Is the intended build and its assets identified and available?
-- [ ] Are configuration, access, rollout controls, and cache behavior ready?
-- [ ] Have the agreed tests and reviews passed, including relevant accessibility and rendering checks?
-- [ ] Are the Go signal and its owner or source clear?
+- [ ] Is the selected build and its assets available and identified above?
+- [ ] Are configuration, access, rollout controls, and cache preparations in place?
+- [ ] Have the required tests and reviews passed?
+- [ ] Are dependencies satisfied and the Go signal confirmed?
 
 **Are we set?**
 
 ## Go
 
-**What's happening?** Has the update been deployed or promoted? What do the agreed route, key journey, rendering, and other checks show? What remains before the finish line?
+- [ ] Has the web update been deployed or promoted as planned?
+- [ ] Have the listed routes, journeys, and other agreed checks passed?
+- [ ] Has the target finish line been reached?
+- [ ] Have remaining issues been handed off and the outcome communicated?
 
-**If blocked:** What are we waiting on? Do we need a human's help or decision? Record the blocker and who or what can resolve it. Other targets may be able to continue.
+**If blocked:** What is blocking progress, and who or what can resolve it? If human help or a decision is needed, record it as hard blocked. Other targets may continue where dependencies allow.
 
-If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure; a new attempt should link to this workstream.
-
-**Outcome:** What shipped, what checks passed, and are there any remaining issues or people to notify?
+If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure and retain this issue as context for any new attempt.
+**Outcome and evidence:**
