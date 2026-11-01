@@ -3,52 +3,48 @@ name: Shipping
 about: Coordinate shipping an update across the relevant targets.
 ---
 
-<!-- Fill in Ready before proceeding. Remove unused rows or mark N/A; link target sub-issues after this issue exists. Check items only when complete. -->
+<!-- Complete the version matrix and links before shipping. Mark unaffected targets N/A. -->
 
 ## Ready
 
-**What is the update?**
+The finish line is reached when every included target has reached the finish line in its linked issue.
 
-**What is the finish line?** For each target below, specify its version, intended audience or environment, and link to its target issue. State any additional overall checks beneath the table.
+| Target | Current version | Shipping version | Target issue |
+| --- | --- | --- | --- |
+| API | | | |
+| Web | | | |
+| iOS | | | |
+| Android | | | |
 
-| Target | Current version | Shipping version | Audience / environment | Target issue |
-| --- | --- | --- | --- | --- |
-| API | | | | |
-| Web | | | | |
-| iOS | | | | |
-| Android | | | | |
+**Coordinator:**
 
-**What overall checks must pass?**
+**Where will the outcome be shared?**
 
-**In what order will targets ship?** Which must wait for another, and which can proceed independently?
-
-**Which compatibility constraints matter?** Include supported API and client versions and any migration sequencing.
-
-**What happens if a target fails or is delayed?** Identify the response and who decides whether this attempt can continue.
-
-**Who coordinates this shipment?** Who or what gives each target's Go signal, and where will it be received?
-
-**Who needs updates, and where?**
+- [ ] Create or link a target issue for each included target and record its version above.
+- [ ] Confirm the API and existing clients remain compatible throughout the rollout; record any blocking dependencies in the target issues.
 
 **Are we ready?**
 
 ## Set
 
-- [ ] Are the target versions and target issues recorded above?
-- [ ] Have required builds, tests, reviews, store submissions, and approvals been completed in each target issue?
-- [ ] Are the rollout order, dependencies, and compatibility requirements satisfied?
-- [ ] Are the target Go signals, owners, and communication channels confirmed?
+- [ ] Check each included target issue and record any outstanding preparations, checks, or approvals there.
+- [ ] Confirm each included target's Go signal and responsible person or system are identified in its issue.
 
 **Are we set?**
 
 ## Go
 
-- [ ] Have the target workstreams started in the agreed order as their gates allow?
-- [ ] Has each required target reached its own finish line, as recorded in its issue?
-- [ ] Have the additional overall checks passed?
-- [ ] Have remaining issues been handed off and the outcome communicated?
+Start included targets in this order: **API → Web → iOS → Android**. Skip unaffected targets. Start each target only after its own preparations and Go signal are complete. A blocked target does not stop an independent target; wait when a recorded dependency requires it.
 
-**If blocked:** What is blocking progress, and who or what can resolve it? If human help or a decision is needed, record it as hard blocked. Other targets may continue where dependencies allow.
+- [ ] Start API shipping, if included.
+- [ ] Start web shipping, if included.
+- [ ] Start iOS shipping, if included.
+- [ ] Start Android shipping, if included.
+- [ ] Confirm each included target has reached its finish line in its target issue.
+- [ ] Share the outcome and hand off remaining issues.
 
-If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure and retain this issue as context for any new attempt.
-**Outcome and evidence:**
+If blocked, record the blocker and how it can be resolved. If human help or a decision is required, mark the workstream hard blocked. Other targets may continue when their dependencies permit.
+
+If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure and preserve this issue as context for a new attempt.
+
+**Outcome:**

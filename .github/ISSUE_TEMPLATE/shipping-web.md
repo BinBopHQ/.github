@@ -3,49 +3,48 @@ name: Shipping - Web
 about: Prepare and ship an update to the Web target.
 ---
 
-<!-- Fill in Ready before proceeding. Remove or mark N/A checks that do not apply. Link the coordinating parent issue if there is one. -->
+<!-- Fill in Ready before proceeding. If a step cannot apply, record why rather than silently checking it. -->
 
 ## Ready
 
-**What web version is shipping?**
+The finish line is reached when the specified version is available in production to its intended audience and the checks below have passed.
 
-**Which artifact or deployment is shipping?** Include its reference and the source revision or build link.
+**Shipping version:**
 
-**Which environment, routes, and audience are affected?**
+**Artifact or deployment reference:**
 
-**Where is the finish line?** State the intended outcome and the agreed checks for this target.
+**Source revision or build link:**
 
-**What compatibility requirements apply?** Include API versions and relevant asset or cache behavior.
+**Production URL:**
 
-**What is the rollout plan?** Record the deployment or promotion method, order, and response if checks fail.
+**Parent shipping issue:**
 
-**Which exact checks must pass?** List URLs, key journeys, accessibility or rendering checks, and where to inspect them.
-
-**Which workstreams, reviews, or approvals must happen first?** Link the coordinating parent and dependencies. Who or what owns each gate?
-
-**Who or what gives the Go signal, and where will it be received?**
-
-**Who needs the outcome, and where?**
+**Go signal: who or what, and where?**
 
 **Are we ready?**
 
 ## Set
 
-- [ ] Is the selected build and its assets available and identified above?
-- [ ] Are configuration, access, rollout controls, and cache preparations in place?
-- [ ] Have the required tests and reviews passed?
-- [ ] Are dependencies satisfied and the Go signal confirmed?
+- [ ] Confirm the version and artifact reference match the shipping matrix.
+- [ ] Confirm the test suite and preview checks pass for the selected change.
+- [ ] Confirm the update is compatible with the production API.
+- [ ] Confirm production configuration, assets, cache behavior, and deployment access are ready.
+- [ ] Confirm the required reviews and approvals are complete.
+- [ ] Receive the Go signal.
 
 **Are we set?**
 
 ## Go
 
-- [ ] Has the web update been deployed or promoted as planned?
-- [ ] Have the listed routes, journeys, and other agreed checks passed?
-- [ ] Has the target finish line been reached?
-- [ ] Have remaining issues been handed off and the outcome communicated?
+- [ ] Deploy or promote the identified web artifact.
+- [ ] Open `/browse` and confirm listings load.
+- [ ] Open a listing page and confirm its content renders and its interactive controls work.
+- [ ] Verify the changed routes and assets load without errors.
+- [ ] Check production logs and error signals for failures introduced by the deployment.
+- [ ] Record the deployment and verification evidence below; notify the parent workstream.
 
-**If blocked:** What is blocking progress, and who or what can resolve it? If human help or a decision is needed, record it as hard blocked. Other targets may continue where dependencies allow.
+If blocked, record the blocker and how it can be resolved. If human help or a decision is required, mark the workstream hard blocked. Other targets may continue when their dependencies permit.
 
-If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure and retain this issue as context for any new attempt.
+If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure and preserve this issue as context for a new attempt.
+
 **Outcome and evidence:**

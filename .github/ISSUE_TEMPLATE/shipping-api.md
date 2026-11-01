@@ -3,49 +3,47 @@ name: Shipping - API
 about: Prepare and ship an update to the API target.
 ---
 
-<!-- Fill in Ready before proceeding. Remove or mark N/A checks that do not apply. Link the coordinating parent issue if there is one. -->
+<!-- Fill in Ready before proceeding. If a step cannot apply, record why rather than silently checking it. -->
 
 ## Ready
 
-**What API version is shipping?**
+The finish line is reached when the specified version is available in production to its intended audience and the checks below have passed.
 
-**Which artifact or deployment is shipping?** Include its reference and the source revision or build link.
+**Shipping version:**
 
-**Which environment and consumers are affected?**
+**Artifact or deployment reference:**
 
-**Where is the finish line?** State the intended outcome and the agreed checks for this target.
+**Source revision or build link:**
 
-**What API compatibility must be maintained?** List supported clients or contract versions.
+**Production environment:**
 
-**What is the deployment and migration order?** Include data migrations, prerequisites, and forward-fix or recovery steps.
+**Parent shipping issue:**
 
-**Which exact checks must pass?** Record endpoints, health signals, thresholds, and where to inspect them.
-
-**Which workstreams, reviews, or approvals must happen first?** Link the coordinating parent and dependencies. Who or what owns each gate?
-
-**Who or what gives the Go signal, and where will it be received?**
-
-**Who needs the outcome, and where?**
+**Go signal: who or what, and where?**
 
 **Are we ready?**
 
 ## Set
 
-- [ ] Is the selected artifact available and identified above?
-- [ ] Are configuration, secrets, access, and migration preparations in place?
-- [ ] Have the required tests, migration checks, reviews, and approvals passed?
-- [ ] Are dependencies satisfied and the Go signal confirmed?
+- [ ] Confirm the version and artifact reference match the shipping matrix.
+- [ ] Confirm the test suite and preview checks pass for the selected change.
+- [ ] Confirm changes remain compatible with deployed clients; complete required migration checks.
+- [ ] Confirm the artifact, production configuration, credentials, and deployment access are ready.
+- [ ] Confirm the required reviews and approvals are complete.
+- [ ] Receive the Go signal.
 
 **Are we set?**
 
 ## Go
 
-- [ ] Has the API been deployed or promoted in the agreed order?
-- [ ] Have the listed functional and operational checks passed?
-- [ ] Has the target finish line been reached?
-- [ ] Have remaining issues been handed off and the outcome communicated?
+- [ ] Deploy or promote the identified API artifact; apply required migrations in their safe order.
+- [ ] Verify `GET /api/v1/listings` returns a successful response with the expected response structure.
+- [ ] Verify the changed endpoints behave as expected for their supported consumers.
+- [ ] Check production logs and error signals for failures introduced by the deployment.
+- [ ] Record the deployment and verification evidence below; notify the parent workstream.
 
-**If blocked:** What is blocking progress, and who or what can resolve it? If human help or a decision is needed, record it as hard blocked. Other targets may continue where dependencies allow.
+If blocked, record the blocker and how it can be resolved. If human help or a decision is required, mark the workstream hard blocked. Other targets may continue when their dependencies permit.
 
-If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure and retain this issue as context for any new attempt.
+If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure and preserve this issue as context for a new attempt.
+
 **Outcome and evidence:**

@@ -3,49 +3,45 @@ name: Shipping - Android
 about: Prepare and ship an update to the Android target.
 ---
 
-<!-- Fill in Ready before proceeding. Remove or mark N/A checks that do not apply. Link the coordinating parent issue if there is one. -->
+<!-- Fill in Ready before proceeding. If a step cannot apply, record why rather than silently checking it. -->
 
 ## Ready
 
-**What app version and build are shipping?**
+The finish line is reached when the specified version is available in production to its intended audience and the checks below have passed.
 
-**Which Google Play build is it?** Include a link or identifying reference.
+**Shipping version:**
 
-**Which track, audience, countries, and rollout settings apply?**
+**Version code and Google Play Console link:**
 
-**Where is the finish line?** State the intended outcome and the agreed checks for this target.
+**Track, countries, and rollout settings:**
 
-**What API and older-client compatibility requirements apply?**
+**Parent shipping issue:**
 
-**What is the submission and rollout plan?** Record the testing, submission, review, release control, and response if the rollout encounters an issue.
-
-**Which exact availability and post-release checks must pass?** Record where to verify them. Store availability does not mean users have installed the update.
-
-**Which workstreams, reviews, or approvals must happen first?** Link the coordinating parent and dependencies. Who or what owns each gate?
-
-**Who or what gives the Go signal, and where will it be received?**
-
-**Who needs the outcome, and where?**
+**Go signal: who or what, and where?**
 
 **Are we ready?**
 
 ## Set
 
-- [ ] Is the intended version and build identified and tested?
-- [ ] Has the build been submitted and approved by Google as required for this rollout?
-- [ ] Are the Play track, listing details, rollout settings, and access ready?
-- [ ] Are dependencies satisfied and the Go signal confirmed?
+- [ ] Confirm the version and version code match the shipping matrix and Google Play Console.
+- [ ] Complete the required build tests and verify compatibility with the production API.
+- [ ] Submit the intended build and confirm Google has approved it for the planned release.
+- [ ] Confirm listing details, track, countries, rollout settings, and Play Console access.
+- [ ] Confirm the required reviews and approvals are complete.
+- [ ] Receive the Go signal.
 
 **Are we set?**
 
 ## Go
 
-- [ ] Has the approved build been made available on the agreed track?
-- [ ] Have Google Play availability and the listed post-release checks passed?
-- [ ] Has the target finish line been reached?
-- [ ] Have remaining issues been handed off and the outcome communicated?
+- [ ] Make the approved build available on the recorded track using the recorded rollout settings.
+- [ ] Verify the intended version is available to the intended audience in Google Play.
+- [ ] Install or update on a supported test device and verify launch and a listing journey.
+- [ ] Check available crash and error signals for failures introduced by the update.
+- [ ] Record the store link and verification evidence below; notify the parent workstream.
 
-**If blocked:** What is blocking progress, and who or what can resolve it? If human help or a decision is needed, record it as hard blocked. Other targets may continue where dependencies allow.
+If blocked, record the blocker and how it can be resolved. If human help or a decision is required, mark the workstream hard blocked. Other targets may continue when their dependencies permit.
 
-If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure and retain this issue as context for any new attempt.
+If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure and preserve this issue as context for a new attempt.
+
 **Outcome and evidence:**

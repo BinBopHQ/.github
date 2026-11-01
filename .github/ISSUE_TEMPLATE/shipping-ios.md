@@ -3,49 +3,45 @@ name: Shipping - iOS
 about: Prepare and ship an update to the iOS target.
 ---
 
-<!-- Fill in Ready before proceeding. Remove or mark N/A checks that do not apply. Link the coordinating parent issue if there is one. -->
+<!-- Fill in Ready before proceeding. If a step cannot apply, record why rather than silently checking it. -->
 
 ## Ready
 
-**What app version and build are shipping?**
+The finish line is reached when the specified version is available in production to its intended audience and the checks below have passed.
 
-**Which App Store Connect build is it?** Include a link or identifying reference.
+**Shipping version:**
 
-**Which audience, storefronts, and rollout settings apply?**
+**Build number and App Store Connect link:**
 
-**Where is the finish line?** State the intended outcome and the agreed checks for this target.
+**Storefronts and release settings:**
 
-**What API and older-client compatibility requirements apply?**
+**Parent shipping issue:**
 
-**What is the submission and release plan?** Record the testing, submission, review, release control, and response if the rollout encounters an issue.
-
-**Which exact availability and post-release checks must pass?** Record where to verify them. Store availability does not mean users have installed the update.
-
-**Which workstreams, reviews, or approvals must happen first?** Link the coordinating parent and dependencies. Who or what owns each gate?
-
-**Who or what gives the Go signal, and where will it be received?**
-
-**Who needs the outcome, and where?**
+**Go signal: who or what, and where?**
 
 **Are we ready?**
 
 ## Set
 
-- [ ] Is the intended version and build identified and tested?
-- [ ] Has the build been submitted and approved by Apple as required for this rollout?
-- [ ] Are App Store listing details, release settings, and access ready?
-- [ ] Are dependencies satisfied and the Go signal confirmed?
+- [ ] Confirm the version and build match the shipping matrix and App Store Connect.
+- [ ] Complete the required build tests and verify compatibility with the production API.
+- [ ] Submit the intended build and confirm Apple has approved it for the planned release.
+- [ ] Confirm listing details, storefronts, release settings, and App Store Connect access.
+- [ ] Confirm the required reviews and approvals are complete.
+- [ ] Receive the Go signal.
 
 **Are we set?**
 
 ## Go
 
-- [ ] Has the approved build been made available using the agreed settings?
-- [ ] Have App Store availability and the listed post-release checks passed?
-- [ ] Has the target finish line been reached?
-- [ ] Have remaining issues been handed off and the outcome communicated?
+- [ ] Make the approved build available using the recorded release settings.
+- [ ] Verify the intended version is available to the intended audience in the App Store.
+- [ ] Install or update on a supported test device and verify launch and a listing journey.
+- [ ] Check available crash and error signals for failures introduced by the update.
+- [ ] Record the store link and verification evidence below; notify the parent workstream.
 
-**If blocked:** What is blocking progress, and who or what can resolve it? If human help or a decision is needed, record it as hard blocked. Other targets may continue where dependencies allow.
+If blocked, record the blocker and how it can be resolved. If human help or a decision is required, mark the workstream hard blocked. Other targets may continue when their dependencies permit.
 
-If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure and retain this issue as context for any new attempt.
+If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure and preserve this issue as context for a new attempt.
+
 **Outcome and evidence:**
