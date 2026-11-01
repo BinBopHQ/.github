@@ -26,11 +26,14 @@ The finish line is reached when the specified version is available in production
 ## Get Set
 
 - [ ] Confirm the version and build match the shipping matrix and App Store Connect.
-- [ ] Complete the required build tests and verify compatibility with the production API.
+- [ ] Pass automated checks and QA on the intended build; record the results below.
+- [ ] Verify compatibility with the production API.
 - [ ] Submit the intended build and confirm Apple has approved it for the planned release.
 - [ ] Confirm listing details, storefronts, release settings, and App Store Connect access.
 - [ ] Confirm the required reviews and approvals are complete.
 - [ ] Receive the Go signal.
+
+**QA results / evidence:**
 
 **Are we set?**
 
@@ -42,8 +45,6 @@ The finish line is reached when the specified version is available in production
 - [ ] Check available crash and error signals for failures introduced by the update.
 - [ ] Record the store link and verification evidence below; notify the parent workstream.
 
-If blocked, record the blocker and how it can be resolved. If human help or a decision is required, mark the workstream hard blocked. Other targets may continue when their dependencies permit.
-
-If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure and preserve this issue as context for a new attempt.
+Record blockers and their resolution here; ask a human for help when needed.
 
 **Outcome and evidence:**

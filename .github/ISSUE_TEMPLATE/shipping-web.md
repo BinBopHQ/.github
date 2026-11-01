@@ -28,11 +28,13 @@ The finish line is reached when the specified version is available in production
 ## Get Set
 
 - [ ] Confirm the version and artifact reference match the shipping matrix.
-- [ ] Confirm the test suite and preview checks pass for the selected change.
+- [ ] Pass automated checks and QA in preview; record the results below.
 - [ ] Confirm the update is compatible with the production API.
 - [ ] Confirm production configuration, assets, cache behavior, and deployment access are ready.
 - [ ] Confirm the required reviews and approvals are complete.
 - [ ] Receive the Go signal.
+
+**QA results / evidence:**
 
 **Are we set?**
 
@@ -45,8 +47,6 @@ The finish line is reached when the specified version is available in production
 - [ ] Check production logs and error signals for failures introduced by the deployment.
 - [ ] Record the deployment and verification evidence below; notify the parent workstream.
 
-If blocked, record the blocker and how it can be resolved. If human help or a decision is required, mark the workstream hard blocked. Other targets may continue when their dependencies permit.
-
-If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure and preserve this issue as context for a new attempt.
+Record blockers and their resolution here; ask a human for help when needed.
 
 **Outcome and evidence:**
