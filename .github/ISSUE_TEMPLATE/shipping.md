@@ -5,7 +5,7 @@ about: Coordinate shipping an update across the relevant targets.
 
 <!-- Complete the version matrix and links before shipping. Mark unaffected targets N/A. -->
 
-## Ready
+## Get Ready
 
 The finish line is reached when every included target has reached the finish line in its linked issue.
 
@@ -21,11 +21,12 @@ The finish line is reached when every included target has reached the finish lin
 **Where will the outcome be shared?**
 
 - [ ] Create or link a target issue for each included target and record its version above.
-- [ ] Confirm the API and existing clients remain compatible throughout the rollout; record any blocking dependencies in the target issues.
+- [ ] Confirm the API and existing clients remain compatible throughout the rollout.
+- [ ] Add GitHub issue dependencies for targets that must wait for another issue to finish; use sub-issues to show which targets this shipment coordinates.
 
 **Are we ready?**
 
-## Set
+## Get Set
 
 - [ ] Check each included target issue and record any outstanding preparations, checks, or approvals there.
 - [ ] Confirm each included target's Go signal and responsible person or system are identified in its issue.
@@ -34,12 +35,19 @@ The finish line is reached when every included target has reached the finish lin
 
 ## Go
 
-Start included targets in this order: **API → Web → iOS → Android**. Skip unaffected targets. Start each target only after its own preparations and Go signal are complete. A blocked target does not stop an independent target; wait when a recorded dependency requires it.
+When an API change is required by the clients, ship it first; then web, iOS, and Android can proceed in parallel as their own gates allow. Skip unaffected targets. If the API is unchanged or a target does not depend on it, that target can proceed independently.
 
-- [ ] Start API shipping, if included.
-- [ ] Start web shipping, if included.
-- [ ] Start iOS shipping, if included.
-- [ ] Start Android shipping, if included.
+```mermaid
+flowchart LR
+    API[API, when required] --> Web[Web]
+    API --> iOS[iOS]
+    API --> Android[Android]
+```
+
+The diagram shows the usual relationship; the actual GitHub issue dependencies are the source of truth for this shipment. Before proceeding, confirm a closed prerequisite reached its finish line: a closed issue can also represent a failed attempt.
+
+- [ ] Start API shipping if included.
+- [ ] Start web, iOS, and Android shipping as their dependencies and gates allow.
 - [ ] Confirm each included target has reached its finish line in its target issue.
 - [ ] Share the outcome and hand off remaining issues.
 

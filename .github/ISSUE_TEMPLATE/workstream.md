@@ -5,7 +5,7 @@ about: Get ready, get set, and go with a clear finish line.
 
 <!-- Answer the questions as the work takes shape. Add tasks, links, evidence, etc. as useful; mark questions that do not apply. -->
 
-## Ready
+## Get Ready
 
 *Get ready.*
 
@@ -25,7 +25,7 @@ about: Get ready, get set, and go with a clear finish line.
 
 **Are we ready?**
 
-## Set
+## Get Set
 
 *Get set.*
 

@@ -5,7 +5,7 @@ about: Prepare and ship an update to the iOS target.
 
 <!-- Fill in Ready before proceeding. If a step cannot apply, record why rather than silently checking it. -->
 
-## Ready
+## Get Ready
 
 The finish line is reached when the specified version is available in production to its intended audience and the checks below have passed.
 
@@ -17,11 +17,13 @@ The finish line is reached when the specified version is available in production
 
 **Parent shipping issue:**
 
+**Blocking issue(s), if any:**
+
 **Go signal: who or what, and where?**
 
 **Are we ready?**
 
-## Set
+## Get Set
 
 - [ ] Confirm the version and build match the shipping matrix and App Store Connect.
 - [ ] Complete the required build tests and verify compatibility with the production API.

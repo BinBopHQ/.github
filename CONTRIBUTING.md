@@ -15,3 +15,5 @@ gh issue create --template "Workstream" --editor
 ```
 
 The CLI does not select Workstream by default; omit `--template` for a blank issue or choose another template by name.
+
+For connected work, use `gh issue create --parent` to create a sub-issue, and `gh issue edit --add-blocked-by` to record an actual blocking dependency. A sub-issue relationship alone does not create a dependency.
