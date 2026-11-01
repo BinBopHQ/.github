@@ -25,6 +25,13 @@ about: Coordinate shipping an update across the relevant targets.
 
 - [ ] **Which workstreams need their own issues?** Create or link sub-issues for the relevant targets, such as API, web, iOS, Android, etc. Define their finish lines and any dependencies.
 
+### Rollout coordination
+
+- [ ] Identify the version or change and the targets included in this shipment.
+- [ ] Create or link a sub-issue for each target that needs independent tracking; record its finish line and gate owner there.
+- [ ] Identify ordering and compatibility requirements, including older app versions and API support.
+- [ ] Agree on rollout checks, the response to a partial rollout, and who needs updates.
+
 **Are we ready?**
 
 ## Set
@@ -39,13 +46,18 @@ about: Coordinate shipping an update across the relevant targets.
 
 - [ ] **Are we sure we're ready?** Have we double-checked everything? Triple-checked?
 
+- [ ] Confirm each target is prepared as agreed, including store submission and approval where needed.
+- [ ] Confirm access, deployment or release controls, and the agreed Go signal for each target.
+
 **Are we set?**
 
 ## Go
 
 *Go!*
 
-- [ ] Reach the finish line, including the agreed rollout checks.
+- [ ] Coordinate the target rollouts as their gates and dependencies allow.
+- [ ] Verify each required target outcome and its agreed rollout checks.
+- [ ] Reach the parent finish line, including the agreed overall checks.
 
 **Keep going until finished. If blocked:**
 
