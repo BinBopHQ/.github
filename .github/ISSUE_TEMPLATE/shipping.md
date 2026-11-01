@@ -3,61 +3,41 @@ name: Shipping
 about: Coordinate shipping an update across the relevant targets.
 ---
 
-<!-- Answer the questions as the shipment takes shape. Add target issues, tasks, links, evidence, etc. as useful; mark questions that do not apply. -->
+<!-- Answer what applies; remove or mark N/A anything that doesn't. Link target sub-issues after creating this issue. -->
 
 ## Ready
 
-*Get ready.*
+**What are we shipping, and who is it for?**
 
-**What are we getting ready for, precisely?** What is changing, and who is it for?
+**Where is the finish line?** Which targets must be available, to which audiences, and what checks must pass?
 
-**What do we need to know?** Which targets, requirements, constraints, dependencies, compatibility needs, etc. matter?
+**Which targets are involved?** Link or create a sub-issue for each target that needs its own workstream. Each should define its own finish line and gate.
 
-**Where is the finish line, exactly?** What does availability mean for each target, and which rollout checks must pass?
+| Target | Workstream | Dependencies / gate |
+| --- | --- | --- |
+| | | |
 
-**The finish line should never move. If it does, start over and get ready again.**
+**What is the rollout plan?** What order, compatibility requirements, and fallback or forward-fix options matter? What can continue if one target is blocked?
 
-**What should we prepare before starting?** What needs to be built, tested, submitted, reviewed, etc.?
-
-**What is our final plan?** What is the rollout order? Which targets can proceed independently? How will we handle a partial rollout, older clients, and issues that arise?
-
-**Are there any gates?** What checks, reviews, or approvals are needed? Who or what is responsible for each one?
-
-**Which workstreams need their own issues?** Link the relevant API, web, iOS, Android, etc. sub-issues and record their dependencies. What is each target's finish line?
+**Who needs to know?** Who coordinates the shipment, gives each Go signal, and receives updates?
 
 **Are we ready?**
 
 ## Set
 
-*Get set.*
-
-**What needs to be in place before we go?** Are the people, access, builds, rollout controls, etc. ready for each target?
-
-**What needs to happen before we go?** Are testing, submissions, approvals, reviews, etc. complete where needed?
-
-**Who or what confirms that we're set to go?** How and where will we receive the signal for each target?
-
-**Are we sure we're ready?** Have we double-checked everything? Triple-checked?
+- [ ] Are the required target builds and rollout controls ready?
+- [ ] Have the agreed testing, reviews, submissions, and approvals happened?
+- [ ] Are dependencies satisfied, including compatibility with older clients?
+- [ ] Is each Go signal and its owner or source clear?
 
 **Are we set?**
 
 ## Go
 
-*Go!*
+**What's happening?** Which targets have shipped, which are waiting, and what do the agreed checks show? Update the target issues as work progresses.
 
-**Where are we now?** Which targets have shipped, which checks have passed, and what remains to reach the parent finish line?
+**If blocked:** What are we waiting on? Do we need a human's help or decision? Record the blocker and who or what can resolve it. Other targets may be able to continue.
 
-A blocked target doesn't necessarily stop the others.
+If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure; a new attempt should link to this workstream.
 
-**Keep going until finished. If blocked:**
-
-- **Are we hard blocked?** Do we need a human's help or decision to continue? If so, ask for help.
-- **How can we get unblocked?** If we're not hard blocked, can we resolve the blocker, wait for a result, use another workstream, etc.?
-
-Once unblocked, continue toward the same finish line. If a human decides the attempt cannot or should not continue, it has failed. Preserve the workstream and its outcome; a new attempt should have the original available as context.
-
-Before stopping:
-
-**Are there any remaining issues?** Have we addressed them and prepared them for hand off?
-
-**Is the outcome clear to those who need to know?** Do we need to communicate with the coordinating workstream, make announcements, etc.?
+**Outcome:** What shipped, what checks passed, and are there any remaining issues or people to notify?

@@ -3,59 +3,35 @@ name: Shipping - iOS
 about: Prepare and ship an update to the iOS target.
 ---
 
-<!-- Answer the questions as the shipment takes shape. Add tasks, links, evidence, etc. as useful; mark questions that do not apply. -->
+<!-- Answer what applies; remove or mark N/A anything that doesn't. Link the coordinating parent issue if there is one. -->
 
 ## Ready
 
-*Get ready.*
+**What are we shipping?** Which app version and build, audience, and App Store listing changes are involved?
 
-**What are we getting ready for, precisely?** Which app version and build, audience, and App Store listing changes are involved?
+**Where is the finish line?** What must be available in the App Store to which audience, and what checks must pass? Availability does not mean every user has installed it.
 
-**What do we need to know?** What API compatibility, dependencies, testing, App Store review, and release settings matter?
+**What is the plan?** How will the build be tested, submitted, reviewed, and made available? What API compatibility and response to a bad rollout matter?
 
-**Where is the finish line, exactly?** What does availability in the App Store mean for the intended audience, and which post-release checks must pass? Users may not install the update immediately.
-
-**The finish line should never move. If it does, start over and get ready again.**
-
-**What should we prepare before starting?** What builds, tests, reviews, etc. are needed?
-
-**What is our final plan?** What is the submission and rollout plan, and how will we respond if an issue arises?
-
-**Are there any gates?** Who or what is responsible for checks, reviews, approvals, etc.?
-
-**Is this part of a larger shipment?** Where is the coordinating issue, and what are the dependencies?
+**What else must happen first?** Which dependencies, checks, reviews, or approvals are required, and who or what owns each gate? Where is the coordinating issue?
 
 **Are we ready?**
 
 ## Set
 
-*Get set.*
-
-**What needs to be in place before we go?** Are the intended build, access, and release settings ready?
-
-**What needs to happen before we go?** Has the build been tested, submitted, and approved as needed? Have other required reviews and approvals happened?
-
-**Who or what confirms that we're set to go?** How and where will we receive the signal?
-
-**Are we sure we're ready?** Have we double-checked everything? Triple-checked?
+- [ ] Is the intended version and build identified and tested?
+- [ ] Has the build been submitted and approved by Apple, as required for the agreed rollout?
+- [ ] Are App Store listing details, release settings, and access ready?
+- [ ] Are the Go signal and its owner or source clear?
 
 **Are we set?**
 
 ## Go
 
-*Go!*
+**What's happening?** Has the approved build been made available using the agreed settings? What do App Store availability and post-release checks show? What remains before the finish line?
 
-**Where are we now?** Has the approved build been made available? What do App Store availability and the agreed post-release checks show? What remains to reach the finish line?
+**If blocked:** What are we waiting on? Do we need a human's help or decision? Record the blocker and who or what can resolve it. Other targets may be able to continue.
 
-**Keep going until finished. If blocked:**
+If the finish line changes, start over and get ready again. If a human decides this attempt cannot or should not continue, record the failure; a new attempt should link to this workstream.
 
-- **Are we hard blocked?** Do we need a human's help or decision to continue? If so, ask for help.
-- **How can we get unblocked?** If we're not hard blocked, can we resolve the blocker, wait for a result, use another workstream, etc.?
-
-Once unblocked, continue toward the same finish line. If a human decides the attempt cannot or should not continue, it has failed. Preserve the workstream and its outcome; a new attempt should have the original available as context.
-
-Before stopping:
-
-**Are there any remaining issues?** Have we addressed them and prepared them for hand off?
-
-**Is the outcome clear to those who need to know?** Do we need to communicate with the coordinating workstream, make announcements, etc.?
+**Outcome:** What shipped, what checks passed, and are there any remaining issues or people to notify?
