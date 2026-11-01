@@ -3,23 +3,27 @@ name: Shipping - Android
 about: Prepare and ship an update to the Android target.
 ---
 
-<!-- Adapt the checks to this shipment. Record answers, links, evidence, owners, etc. Check a box when addressed, including when it does not apply. -->
+<!-- Answer the questions as the shipment takes shape. Add tasks, links, evidence, etc. as useful; mark questions that do not apply. -->
 
 ## Ready
 
 *Get ready.*
 
-**What are we getting ready for?**
+**What are we getting ready for, precisely?** Which app version and build, Google Play track and audience, and store listing changes are involved?
 
-**Where is the finish line, exactly?** The agreed Android update is available to its intended audience through Google Play and its rollout checks pass; users are not assumed to have installed it.
+**What do we need to know?** What API compatibility, dependencies, testing, Google Play review, and rollout settings matter?
+
+**Where is the finish line, exactly?** What does availability in Google Play mean for the intended audience, and which post-release checks must pass? Users may not install the update immediately.
 
 **The finish line should never move. If it does, start over and get ready again.**
 
-- [ ] Identify the app version and build, intended track or audience, store listing changes, and API compatibility.
-- [ ] Plan testing, Google Play submission and review, rollout controls, and a response if the rollout encounters an issue.
-- [ ] Define availability and post-release checks, including what can be verified without assuming user updates.
-- [ ] Identify dependencies, gates, and who or what is responsible for each one.
-- [ ] Link the coordinating parent issue if this work is part of a larger shipment.
+**What should we prepare before starting?** What builds, tests, reviews, etc. are needed?
+
+**What is our final plan?** What is the submission and rollout plan, and how will we respond if an issue arises?
+
+**Are there any gates?** Who or what is responsible for checks, reviews, approvals, etc.?
+
+**Is this part of a larger shipment?** Where is the coordinating issue, and what are the dependencies?
 
 **Are we ready?**
 
@@ -27,9 +31,13 @@ about: Prepare and ship an update to the Android target.
 
 *Get set.*
 
-- [ ] Confirm the intended build has been tested, submitted, and approved as needed, and the track, rollout settings, and access are ready.
-- [ ] Confirm required approvals and the person or system giving the Go signal.
-- [ ] Confirm how and where the Go signal will be received and double-check that we're ready.
+**What needs to be in place before we go?** Are the intended build, access, track, and rollout settings ready?
+
+**What needs to happen before we go?** Has the build been tested, submitted, and approved as needed? Have other required reviews and approvals happened?
+
+**Who or what confirms that we're set to go?** How and where will we receive the signal?
+
+**Are we sure we're ready?** Have we double-checked everything? Triple-checked?
 
 **Are we set?**
 
@@ -37,9 +45,7 @@ about: Prepare and ship an update to the Android target.
 
 *Go!*
 
-- [ ] Make the approved build available using the agreed track and rollout settings.
-- [ ] Verify Google Play availability and the agreed post-release checks.
-- [ ] Confirm the finish line has been reached.
+**Where are we now?** Has the approved build been made available on the agreed track? What do Google Play availability and the agreed post-release checks show? What remains to reach the finish line?
 
 **Keep going until finished. If blocked:**
 
@@ -50,5 +56,6 @@ Once unblocked, continue toward the same finish line. If a human decides the att
 
 Before stopping:
 
-- [ ] Address or hand off remaining issues.
-- [ ] Communicate the outcome to those who need to know, including the coordinating workstream if applicable.
+**Are there any remaining issues?** Have we addressed them and prepared them for hand off?
+
+**Is the outcome clear to those who need to know?** Do we need to communicate with the coordinating workstream, make announcements, etc.?

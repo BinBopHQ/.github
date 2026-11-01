@@ -3,23 +3,27 @@ name: Shipping - API
 about: Prepare and ship an update to the API target.
 ---
 
-<!-- Adapt the checks to this shipment. Record answers, links, evidence, owners, etc. Check a box when addressed, including when it does not apply. -->
+<!-- Answer the questions as the shipment takes shape. Add tasks, links, evidence, etc. as useful; mark questions that do not apply. -->
 
 ## Ready
 
 *Get ready.*
 
-**What are we getting ready for?**
+**What are we getting ready for, precisely?** Which API version, endpoints, changes, and consumers are involved?
 
-**Where is the finish line, exactly?** The agreed API change is available to its intended consumers and its rollout checks pass. Define endpoints, environment, and availability.
+**What do we need to know?** What compatibility, deployed-client, environment, and data or migration constraints matter?
+
+**Where is the finish line, exactly?** What does availability mean for the affected consumers, and which health, error, latency, and functional checks must pass?
 
 **The finish line should never move. If it does, start over and get ready again.**
 
-- [ ] Identify the API version, changes, affected consumers, and compatibility with deployed clients.
-- [ ] Plan database or data migrations, deployment order, and a forward fix if needed.
-- [ ] Define health, error, latency, and functional checks appropriate to the change.
-- [ ] Identify dependencies, gates, and who or what is responsible for each one.
-- [ ] Link the coordinating parent issue if this work is part of a larger shipment.
+**What should we prepare before starting?** What builds, tests, reviews, etc. are needed?
+
+**What is our final plan?** What is the deployment and migration order? How will we respond if a change needs a fix?
+
+**Are there any gates?** Who or what is responsible for checks, reviews, approvals, etc.?
+
+**Is this part of a larger shipment?** Where is the coordinating issue, and what are the dependencies?
 
 **Are we ready?**
 
@@ -27,9 +31,13 @@ about: Prepare and ship an update to the API target.
 
 *Get set.*
 
-- [ ] Confirm the selected build or deployment artifact, configuration, secrets, and access are ready.
-- [ ] Confirm tests, migration readiness, approvals, and the person or system giving the Go signal.
-- [ ] Confirm how and where the Go signal will be received and double-check that we're ready.
+**What needs to be in place before we go?** Are the intended artifact, configuration, access, and migration preparations ready?
+
+**What needs to happen before we go?** Have the agreed tests, migration checks, reviews, and approvals happened?
+
+**Who or what confirms that we're set to go?** How and where will we receive the signal?
+
+**Are we sure we're ready?** Have we double-checked everything? Triple-checked?
 
 **Are we set?**
 
@@ -37,9 +45,7 @@ about: Prepare and ship an update to the API target.
 
 *Go!*
 
-- [ ] Deploy or promote the agreed API change and apply migrations in the agreed order.
-- [ ] Verify API health and consumer-facing behavior using the agreed checks.
-- [ ] Confirm the finish line has been reached.
+**Where are we now?** Has the API change been deployed or promoted in the agreed order? What do the health and consumer-facing checks show? What remains to reach the finish line?
 
 **Keep going until finished. If blocked:**
 
@@ -50,5 +56,6 @@ Once unblocked, continue toward the same finish line. If a human decides the att
 
 Before stopping:
 
-- [ ] Address or hand off remaining issues.
-- [ ] Communicate the outcome to those who need to know, including the coordinating workstream if applicable.
+**Are there any remaining issues?** Have we addressed them and prepared them for hand off?
+
+**Is the outcome clear to those who need to know?** Do we need to communicate with the coordinating workstream, make announcements, etc.?

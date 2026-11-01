@@ -3,34 +3,27 @@ name: Shipping
 about: Coordinate shipping an update across the relevant targets.
 ---
 
-<!-- Adapt these questions to the shipment. Add answers, tasks, links, etc. as useful. Check a box when it has been addressed, including when it does not apply. -->
+<!-- Answer the questions as the shipment takes shape. Add target issues, tasks, links, evidence, etc. as useful; mark questions that do not apply. -->
 
 ## Ready
 
 *Get ready.*
 
-- [ ] **What are we getting ready for, precisely?** What is changing, and who is it for?
+**What are we getting ready for, precisely?** What is changing, and who is it for?
 
-- [ ] **What do we need to know?** Which targets are involved? What are the requirements, constraints, dependencies, compatibility needs, etc.?
+**What do we need to know?** Which targets, requirements, constraints, dependencies, compatibility needs, etc. matter?
 
-- [ ] **Where is the finish line, exactly?** What does available mean for each target, and how will we know the agreed rollout checks have passed?
+**Where is the finish line, exactly?** What does availability mean for each target, and which rollout checks must pass?
 
 **The finish line should never move. If it does, start over and get ready again.**
 
-- [ ] **What should we prepare before starting?** What needs to be built, tested, submitted, reviewed, etc.?
+**What should we prepare before starting?** What needs to be built, tested, submitted, reviewed, etc.?
 
-- [ ] **What is our final plan?** How will we coordinate the rollout, including work that can proceed independently and any follow-up if something goes wrong?
+**What is our final plan?** What is the rollout order? Which targets can proceed independently? How will we handle a partial rollout, older clients, and issues that arise?
 
-- [ ] **Are there any gates?** What reviews, approvals, automated checks, etc. are needed? Who or what is responsible for each one?
+**Are there any gates?** What checks, reviews, or approvals are needed? Who or what is responsible for each one?
 
-- [ ] **Which workstreams need their own issues?** Create or link sub-issues for the relevant targets, such as API, web, iOS, Android, etc. Define their finish lines and any dependencies.
-
-### Rollout coordination
-
-- [ ] Identify the version or change and the targets included in this shipment.
-- [ ] Create or link a sub-issue for each target that needs independent tracking; record its finish line and gate owner there.
-- [ ] Identify ordering and compatibility requirements, including older app versions and API support.
-- [ ] Agree on rollout checks, the response to a partial rollout, and who needs updates.
+**Which workstreams need their own issues?** Link the relevant API, web, iOS, Android, etc. sub-issues and record their dependencies. What is each target's finish line?
 
 **Are we ready?**
 
@@ -38,16 +31,13 @@ about: Coordinate shipping an update across the relevant targets.
 
 *Get set.*
 
-- [ ] **What needs to be in place before we go?** People, access, builds, rollout settings, etc.?
+**What needs to be in place before we go?** Are the people, access, builds, rollout controls, etc. ready for each target?
 
-- [ ] **What needs to happen before we go?** Testing, submissions, approvals, reviews, etc.?
+**What needs to happen before we go?** Are testing, submissions, approvals, reviews, etc. complete where needed?
 
-- [ ] **Who or what confirms that we're set to go?** How and where will we receive the signal?
+**Who or what confirms that we're set to go?** How and where will we receive the signal for each target?
 
-- [ ] **Are we sure we're ready?** Have we double-checked everything? Triple-checked?
-
-- [ ] Confirm each target is prepared as agreed, including store submission and approval where needed.
-- [ ] Confirm access, deployment or release controls, and the agreed Go signal for each target.
+**Are we sure we're ready?** Have we double-checked everything? Triple-checked?
 
 **Are we set?**
 
@@ -55,20 +45,19 @@ about: Coordinate shipping an update across the relevant targets.
 
 *Go!*
 
-- [ ] Coordinate the target rollouts as their gates and dependencies allow.
-- [ ] Verify each required target outcome and its agreed rollout checks.
-- [ ] Reach the parent finish line, including the agreed overall checks.
+**Where are we now?** Which targets have shipped, which checks have passed, and what remains to reach the parent finish line?
+
+A blocked target doesn't necessarily stop the others.
 
 **Keep going until finished. If blocked:**
 
 - **Are we hard blocked?** Do we need a human's help or decision to continue? If so, ask for help.
 - **How can we get unblocked?** If we're not hard blocked, can we resolve the blocker, wait for a result, use another workstream, etc.?
 
-A blocked target doesn't necessarily stop the others. Once unblocked, continue toward the same finish line.
-
-**If a human decides the attempt cannot or should not continue, it has failed.** Preserve the workstream and its outcome. If we try again, start a new workstream with the original available as context.
+Once unblocked, continue toward the same finish line. If a human decides the attempt cannot or should not continue, it has failed. Preserve the workstream and its outcome; a new attempt should have the original available as context.
 
 Before stopping:
 
-- [ ] **Are there any remaining issues?** Have we addressed them and prepared them for hand off?
-- [ ] **Is the outcome clear to those who need to know?** Do we need to do any communication, announcements, etc.?
+**Are there any remaining issues?** Have we addressed them and prepared them for hand off?
+
+**Is the outcome clear to those who need to know?** Do we need to communicate with the coordinating workstream, make announcements, etc.?
