@@ -1,51 +1,36 @@
 ---
 name: Shipping
-about: Coordinate shipping an update across the relevant targets.
+about: Coordinate an update across its targets.
 ---
-
-<!-- Mark uninvolved targets N/A. Link target issues as sub-issues and add dependencies where needed. -->
 
 ## Get Ready
 
-**Coordinator:**
+**What are we shipping, and when is it finished?**
 
-**Outcome shared at:**
+**Who is coordinating?**
 
-| Target | Current version | Shipping version | Target issue |
-| --- | --- | --- | --- |
-| API | | | |
-| Web | | | |
-| iOS | | | |
-| Android | | | |
+| Target | Version | PR, build, or issue |
+| --- | --- | --- |
+| API | | |
+| Web | | |
+| iOS | | |
+| Android | | |
 
-- [ ] Link each target issue and add its dependencies.
-- [ ] Confirm the rollout preserves compatibility with existing clients.
+<!-- Remove uninvolved targets. Add sub-issues and dependencies where useful. -->
 
 ## Get Set
 
-Record QA and readiness in each target issue; link the evidence here. Mark targets N/A where appropriate.
+- [ ] Required checks, QA, and reviews have passed. Link evidence below.
+- [ ] Store submissions are approved and ready where applicable.
+- [ ] The rollout preserves compatibility with existing clients.
+- [ ] Each target's Go signal and any dependencies are clear.
 
-| Target | QA result / evidence | Ready to ship? | Go signal received? |
-| --- | --- | --- | --- |
-| API | | | |
-| Web | | | |
-| iOS | | | |
-| Android | | | |
-
-- [ ] Confirm each included target is ready and its Go signal is accounted for.
+**QA and readiness evidence:**
 
 ## Go
 
-Ship the API first when a target depends on it; otherwise, proceed independently. Web, iOS, and Android can ship in parallel when their dependencies and gates permit.
+Ship the API first when a target depends on it; other targets can proceed independently as their gates allow.
 
-```mermaid
-flowchart LR
-    API[API, when required] --> Web[Web]
-    API --> iOS[iOS]
-    API --> Android[Android]
-```
-
-- [ ] Confirm each dependency succeeded before starting the dependent target.
 - [ ] Confirm each included target reached its finish line.
 - [ ] Share the outcome and hand off remaining issues.
 
